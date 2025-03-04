@@ -18,6 +18,9 @@
   "author": "sicot jean vivien <jeanvivien.sicot@gmail.com>",
   "license": "MIT",
   "files": ["dist"],
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  },
   "devDependencies": {
     "typescript": "^5.3.3",
     "jest": "^29.6.2",
