@@ -11,7 +11,7 @@ import {
 } from "./responseTypes";
 
 /**
- * DERIVATIVES TICKERS LISTS : /derivatives/tickers
+ * DERIVATIVES TICKERS LISTS : /derivatives
  * @link https://docs.coingecko.com/v3.0.1/reference/derivatives-tickers
  * @returns {Promise<ListAllDerivativeTickers>}
  * @throws {APIError, NetworkError, ValidationError, Error}
@@ -19,7 +19,7 @@ import {
  * getDerivativesTickers()
  */
 export async function getDerivativesTickers(): Promise<ListAllDerivativeTickers> {
-  return await fetchApi<ListAllDerivativeTickers>("/derivatives/tickers");
+  return await fetchApi<ListAllDerivativeTickers>("/derivatives");
 }
 
 /**

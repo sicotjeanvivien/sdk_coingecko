@@ -82,7 +82,7 @@ export async function getCoinTickersById(params: GetCoinTrickerByIdParams): Prom
  * @returns {Promise<GetCoinHistoricalData>}
  * @throws {APIError, NetworkError, ValidationError, Error}
  * @example
- * getCoinHistoricalDataById({ id: "bitcoin", date: "30-12-2021" })
+ * getCoinHistoricalDataById({ id: "bitcoin", date: "30-12-2024" })
  */
 export async function getCoinHistoricalDataById(params: GetCoinHistoricalParams): Promise<GetCoinHistoricalData> {
   const { id } = params;
@@ -110,7 +110,7 @@ export async function getCoinHistoricalChartDataById(params: GetCoinHistoricalCh
  * @returns {Promise<GetHistoricalMarketData>}
  * @throws {APIError, NetworkError, ValidationError, Error}
  * @example
- * getCoinHistoricalChartDataRangeById({ id: "bitcoin", vs_currency: "usd", from: "1711929600", to: "1712275200" })
+ * getCoinHistoricalChartDataRangeById({ id: "bitcoin", vs_currency: "usd", from: 1711929600, to: 1712275200 })
  */
 export async function getCoinHistoricalChartDataRangeById(params: GetCoinHistoricalChartDataWithinTimeRangeParams): Promise<GetHistoricalMarketData> {
   const { id } = params;
@@ -124,8 +124,8 @@ export async function getCoinHistoricalChartDataRangeById(params: GetCoinHistori
  * @returns {Promise<GetCoinOHLC>}
  * @throws {APIError, NetworkError, ValidationError, Error}
  * @example
- * getCoinOhlcChartDataById({ id: "bitcoin", vs_currency: "usd", days: "1" })
- * getCoinOhlcChartDataById({ id: "bitcoin", vs_currency: "usd", days: "180", precision: "4" })
+ * getCoinOhlcChartDataById({ id: "bitcoin", vs_currency: "usd", days: 1 })
+ * getCoinOhlcChartDataById({ id: "bitcoin", vs_currency: "usd", days: 180, precision: 4 })
  */
 export async function getCoinOhlcChartDataById(params: GetCoinOHLCParams): Promise<GetCoinOHLC> {
   const { id } = params;

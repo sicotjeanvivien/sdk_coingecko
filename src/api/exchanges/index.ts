@@ -20,7 +20,7 @@ import {
  * @param {GetExchangesParams} params
  * @returns {Promise<ListAllExchanges>}
  * @example
- * GetExchangesListWithData({ per_page: 10, page: 1 });
+ * getExchangesWithData({ per_page: 10, page: 1 });
  */
 export async function getExchangesWithData(params: GetExchangesParams): Promise<ListAllExchanges> {
   return fetchApi<ListAllExchanges>("/exchanges", params);
@@ -32,7 +32,7 @@ export async function getExchangesWithData(params: GetExchangesParams): Promise<
  * @param {GetExchangesListParams} params
  * @returns {Promise<ListAllExchangesWithIdName>}
  * @example
- * GetExchangesList({ status: "active" });
+ * getExchangesList({ status: "active" });
  */
 export async function getExchangesList(params: GetExchangesListParams): Promise<ListAllExchangesWithIdName> {
   return fetchApi<ListAllExchangesWithIdName>("/exchanges/list", params);
@@ -44,7 +44,7 @@ export async function getExchangesList(params: GetExchangesListParams): Promise<
  * @param {GetExchangesIdParams} params
  * @returns {Promise<GetExchangesVolumeChart>}
  * @example
- * GetExchangesId({ id: "binance" });
+ * getExchangesId({ id: "binance" });
  */
 export async function getExchangesId(params: GetExchangesIdParams): Promise<GetExchangesVolumeChart> {
   const { id } = params;
@@ -57,7 +57,7 @@ export async function getExchangesId(params: GetExchangesIdParams): Promise<GetE
  * @param {GetExchangesTikersIdParams} params
  * @returns {Promise<GetExchangeTickers>}
  * @example
- * GetExchangesTickersId({ id: "binance", coin_ids: "bitcoin" });
+ * getExchangesTickersId({ id: "binance", coin_ids: "bitcoin" });
  */
 export async function getExchangesTickersId(params: GetExchangesTikersIdParams): Promise<GetExchangeTickers> {
   const { id } = params;
@@ -70,7 +70,7 @@ export async function getExchangesTickersId(params: GetExchangesTikersIdParams):
  * @param {GetExchangesVolumeChartData} params
  * @returns {Promise<EschangeVolumeChartResponse>}
  * @example
- * GetExchangesVolumeChart({ id: "binance", days: 1 });
+ * getExchangesVolumeChart({ id: "binance", days: 1 });
  */
 export async function getExchangesVolumeChart(params: GetExchangesVolumeChartParams): Promise<GetExchangesVolumeChartData> {
   const { id } = params;

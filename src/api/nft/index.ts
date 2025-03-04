@@ -15,7 +15,7 @@ import {
  * @param {GetNFTsParams} params
  * @returns {Promise<ListAllNFTsCategories>}
  * @example
- * GetNFTs({ order: 'market_cap_desc', per_page: 10, page: 1 });
+ * GetNFTs({ order: 'h24_volume_usd_asc', per_page: 10, page: 1 });
  */
 export async function getNFTs(params: GetNFTsParams): Promise<ListAllNFTsCategories> {
   return await fetchApi<ListAllNFTsCategories>("/nfts/list", params);
@@ -40,7 +40,7 @@ export async function getNFTById(params: GetNFTByIdParams): Promise<GetNFTsData>
  * @param {GetNFTByContractAddressParams} params
  * @returns {Promise<GetNFTsData>}
  * @example
- * GetNFTByContractAddress({ asset_platform_id: 'ethereum', contract_address: '0x7be80764ea72d34c771382ab260e3f7cd4d1e431' });
+ * GetNFTByContractAddress({ asset_platform_id: 'ethereum', contract_address: '0xBd3531dA5CF5857e7CfAA92426877b022e612cf8' });
  */
 export async function getNFTByContractAddress(params: GetNFTByContractAddressParams): Promise<GetNFTsData> {
   const { asset_platform_id, contract_address } = params;
