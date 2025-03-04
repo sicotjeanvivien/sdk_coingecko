@@ -34,14 +34,31 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      - name: Check Git status
+        run: |
+          git status
+          if [[ $(git status --porcelain) ]]; then
+            echo "Git working directory is not clean. Stashing changes..."
+            git stash
+          fi
+
       - name: Bump version
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
           npm version patch -m "Bump version to %s [skip ci]"
           git push origin main --tags
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish to npm
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Restore stashed changes
+        run: |
+          if git rev-parse --verify --quiet refs/stash; then
+            echo "Restoring stashed changes..."
+            git stash pop
+          fi
