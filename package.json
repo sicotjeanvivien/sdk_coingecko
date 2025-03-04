@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mon-scope/mon-module.git"
+    "url": "https://github.com/sicotjeanvivien/sdk_coingecko"
   },
   "keywords": ["node", "module", "typescript", "npm"],
-  "author": "sicot jean vivien <mon.email@example.com>",
+  "author": "sicot jean vivien <jeanvivien.sicot@gmail.com>",
   "license": "MIT",
   "files": ["dist"],
   "devDependencies": {
