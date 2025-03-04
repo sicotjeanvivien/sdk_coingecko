@@ -1,6 +1,6 @@
 {
-  "name": "@awsd/sdk_coingecko", 
-  "version": "1.0.0",
+  "name": "@awsd/sdk_coingecko",
+  "version": "1.0.1",
   "description": "Un module npm génial en TypeScript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -14,10 +14,17 @@
     "type": "git",
     "url": "https://github.com/sicotjeanvivien/sdk_coingecko"
   },
-  "keywords": ["node", "module", "typescript", "npm"],
+  "keywords": [
+    "node",
+    "module",
+    "typescript",
+    "npm"
+  ],
   "author": "sicot jean vivien <jeanvivien.sicot@gmail.com>",
   "license": "MIT",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "dotenv": "^16.0.0"
   },
