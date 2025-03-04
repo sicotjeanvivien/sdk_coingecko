@@ -1,0 +1,33 @@
+{
+  "name": "@awsd/sdk_coingecko", 
+  "version": "1.0.0",
+  "description": "Un module npm génial en TypeScript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "jest",
+    "lint": "eslint 'src/**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mon-scope/mon-module.git"
+  },
+  "keywords": ["node", "module", "typescript", "npm"],
+  "author": "sicot jean vivien <mon.email@example.com>",
+  "license": "MIT",
+  "files": ["dist"],
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "jest": "^29.6.2",
+    "eslint": "^8.52.0",
+    "dotenv": "^16.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
